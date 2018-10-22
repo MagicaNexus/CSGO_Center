@@ -1,0 +1,52 @@
+page-map {
+
+    .backcol, .toolbar-background   
+      {
+        background: color($colors, backgroundcolor);
+      }
+
+      .backimg
+  {
+    background: color($colors, backgroundcardinfoweaponslist);  
+  }
+
+      .toolbar-title-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default
+      {
+        
+        color : color($colors, navbarcolor);
+      }
+
+      .col1 {
+        border: solid 1px grey;
+        border-bottom-style: none;
+        border-right-style: none;
+        text-align: center;
+        font-size : 1.5rem;
+        
+    }
+
+    .map{
+      max-width: 100%;
+      height: auto;
+      padding : 0px;
+    }
+    
+    .col1:last-child {
+        border-right: solid 1px grey;
+    }
+    
+    .row1:last-child .col {
+        border-bottom: solid 1px grey;
+    }
+    
+    .headerborder
+    {
+      font-weight: bold;
+    }
+
+    .textalign
+  {
+    text-align: center;
+  }
+
+}

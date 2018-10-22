@@ -1,0 +1,96 @@
+page-uniqueweapon {
+
+ 
+    .backcol, .toolbar-background   ,.button-md
+      {
+        background: color($colors, backgroundcolor);
+      }
+
+      .toolbar-title-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default
+      {
+        
+        color : color($colors, navbarcolor);
+      }
+
+      
+      .cercle
+    {
+        text-align: center;
+        background:#ffffff;
+        border-radius:50%;
+        width:26px;
+        height:26px;
+
+    }
+
+    ion-icon{
+      font-size: 2.4rem;
+  }
+
+  ion-card{
+    background: #D3D3D3;
+    border-radius: 10px;
+    
+}
+
+  .backimg
+  {
+    background: color($colors, backgroundcardinfoweaponslist);  
+  }
+
+  .weapon
+  {
+    max-width: 40%;
+    height: auto;
+    padding : 0px;
+  }
+  .imgpattern
+  {
+    max-height: 100%;
+    width:  auto;
+    padding : 0px;
+  }
+
+  .textalign
+  {
+    text-align: center;
+    background: color($colors, backimgweaponslist);
+  }
+
+  .col1 {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+    text-align: center;
+    font-size : 1.7rem;
+    
+}
+
+.col1:last-child {
+    border-right: solid 1px grey;
+}
+
+.row1:last-child {
+    border-bottom: solid 1px grey;
+}
+
+.headerborder
+{
+  font-weight: bold;
+}
+
+.gauche
+{
+  text-align: left;
+}
+
+.imgside{
+  max-width: 100%;
+        height: auto;
+        padding : 0px;
+}
+
+
+  
+}
+

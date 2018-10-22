@@ -1,0 +1,54 @@
+page-weapon-category-choices {
+
+    .card-background-page {
+
+        ion-card {
+          position: relative;
+          text-align: center;
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 32%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+      
+        .card-subtitle {
+          font-size: 1.0em;
+          position: absolute;
+          top: 60%;
+          width: 100%;
+          color: #fff;
+        }
+      
+      }
+
+      .parentlogo
+      {
+        position: relative;
+      }
+
+      .logo{
+        position: absolute;
+        top: 0%;
+      }
+
+      .backcol, .toolbar-background   
+      {
+        background: color($colors, backgroundcolor);
+      }
+
+      .toolbar-title-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default
+      {
+        
+        color : color($colors, navbarcolor);
+      }
+
+      .col{
+        padding:3px; 
+       }
+
+}

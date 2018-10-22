@@ -1,0 +1,35 @@
+page-mappool {
+
+    .card-background-page {
+
+        ion-card {
+          position: relative;
+          text-align: center;
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 40%;
+          font-size: 3.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+      
+      
+      
+      }
+
+      .backcol, .toolbar-background   
+      {
+        background: color($colors, backgroundcolor);
+      }
+
+      .toolbar-title-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default
+      {
+        
+        color : color($colors, navbarcolor);
+      }
+
+
+}

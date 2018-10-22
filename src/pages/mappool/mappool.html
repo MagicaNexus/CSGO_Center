@@ -1,0 +1,29 @@
+<!--
+  Generated template for the MappoolPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Maps</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+
+<ion-content class="card-background-page backcol">
+  <ion-card class="back" *ngFor="let map of listCompetitiveMapPool"  (tap)='onClickMap(map)' >
+
+    <img src="{{map.picture}}"/>
+    <div class="card-title">{{map.nom}}</div>
+        
+   
+     
+     
+           
+        
+  </ion-card>
+</ion-content>

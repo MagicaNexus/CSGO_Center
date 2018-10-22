@@ -1,0 +1,75 @@
+<!--
+  Generated template for the SensitivityMousePadPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-row>
+      <ion-col>
+        <ion-title>Your sensibility</ion-title>
+      </ion-col>
+      <ion-col col-2 >
+          <div class="cercle">
+              <ion-icon name="ios-home" (tap)="onClickHome()"></ion-icon>
+          </div>
+      </ion-col>
+    </ion-row>
+
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="backcol">
+
+  <ion-card>
+    <ion-card-header>
+      Your result
+    </ion-card-header>
+
+    <ion-card-content class="content">
+      Your optimal sensitivity is
+    </ion-card-content>
+
+
+
+    <ion-card-content class="sensi">
+      {{average}}
+
+    </ion-card-content>
+
+    <button ion-button navPush="SensitivityCsgoPage">
+      Restart the test
+    </button>
+
+    <ion-card-content></ion-card-content>
+
+    <ion-card-content class="content2">
+      Put these commands into your developper console, or into a .cfg file in your [./csgo/cfg] folder. Make sure to
+      put 'exec [your .cfg filename].cfg' in your launch options if you are usinf a .cfg file :
+      <ion-row>
+        <ion-col col-3>
+
+        </ion-col>
+        <ion-col>
+          <br><br>sensitivity "{{average}}"
+          <br>m-rawinput "1"
+          <br>m_customaccel "0"
+          <br>m_customaccel_exponent "1"
+          <br>m_customaccel_max "0"
+          <br>m_customaccel_scale "0"
+          <br>m_customaccel1 "0"
+          <br>m_customaccel2 "0"
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,61 @@
+page-sensitivity-csgo {
+    .center{
+        text-align: center;
+        font-size: 1.2em;
+    }
+
+    .center1{
+        text-align: center;
+        font-size: 2em;
+    }
+
+
+    .backcol, .toolbar-background  , .button-md
+      {
+        background: color($colors, backgroundcolor);
+      }
+
+      .toolbar-title-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default
+      {
+        
+        color : color($colors, navbarcolor);
+      }
+
+
+      ion-card.card{
+        background: #D3D3D3;
+        border-radius: 10px;
+    }
+  
+
+    .card-content-md.center3
+    {
+        text-align:center;
+        font-size: 1.2em;
+    }
+
+    .cercle
+    {
+        text-align: center;
+        background:#ffffff;
+        border-radius:50%;
+        width:26px;
+        height:26px;
+
+    }
+
+    .explain
+    {
+        font-size: 1.2rem;
+    }
+
+    ion-icon{
+        font-size: 2.4rem;
+    }
+
+    ion-card.card.card1{
+        background-color: #D4F5FF;
+    }
+}
+
+

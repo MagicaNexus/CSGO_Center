@@ -1,0 +1,150 @@
+page-weapon-list {
+    .card-background-page {
+
+        ion-card {
+          position: relative;
+          text-align: center;
+          
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 32%;
+          font-size: 2.0em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+        }
+      
+        .card-subtitle {
+          font-size: 1.0em;
+          position: absolute;
+          top: 60%;
+          width: 100%;
+          color: #fff;
+        }
+
+      }
+
+    
+  
+        .img1{
+          max-width: 100%;
+          height: auto;
+          padding : 0px;
+    
+      }
+
+      .backcol, .toolbar-background   
+      {
+        background: color($colors, backgroundcolor);
+      }
+
+      .toolbar-title-md, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default
+      {
+        
+        color : color($colors, navbarcolor);
+      }
+
+      .parentlogo
+      {
+        position: relative;
+      
+      }
+
+      .logo{
+        position: absolute;
+        top: 0%;
+        text-align: center;
+      }
+
+      .head {
+        background-color: color($colors, subheader2);
+        color: white;
+        font-weight:bold;
+        text-align: center;
+      }
+
+      .head2 {
+        background-color: color($colors, subheader);
+        color: white;
+        font-weight:bold;
+        text-align: center;
+      }
+
+      .backcard
+      {
+        background: color($colors, backgroundcardinfoweaponslist);
+      }
+
+    
+      .backimg
+      {
+        background: color($colors, backimgweaponslist);
+        text-align: center;
+       
+      }
+
+      .weaponname
+      {
+
+        font-size: 1.8em;
+      }
+
+      .weaponname1
+      {
+      
+        text-align: center;
+        font-size: 1.2em;
+     
+      }
+      .sizeside
+      {
+        max-width: 40%;
+        height: auto;
+        text-align:center; 
+      }
+
+      .sizeside2
+      {
+        max-width: 80%;
+        height: auto;
+        padding : 0px;
+      }
+
+      .right
+      {
+        text-align: center;
+      }
+
+      .logo2{
+        position: absolute;
+        top: -20%;
+        text-align: center;
+      }
+
+      .col{
+       padding:3px; 
+      }
+
+      .logo3{
+        position: absolute;
+        top: -20%;
+        text-align: center;
+      }
+
+      .textalign{
+        text-align: center;
+      }
+
+      ion-col.backimg.col{
+
+        text-align: center;
+      }
+
+      
+}
+
+
+
+

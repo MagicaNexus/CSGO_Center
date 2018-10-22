@@ -1,0 +1,174 @@
+<!--
+  Generated template for the WeaponListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ng-container *ngIf="side == 'counter'">
+      <ion-row>
+        <ion-col>
+          <ion-title light>Weapons</ion-title>
+        </ion-col>
+        <ion-col col-2 class="parentlogo">
+          <img class="logo" navPush="WeaponSidePage" height="30" src="../../assets/imgs/weapons/counterlogo.png" />
+        </ion-col>
+      </ion-row>
+
+
+    </ng-container>
+    <ng-container *ngIf="side == 'terrorist'">
+      <ion-row>
+        <ion-col>
+          <ion-title light>Weapons</ion-title>
+        </ion-col>
+        <ion-col class="parentlogo" col-2>
+          <img class="logo" navPush="WeaponSidePage" height="30" src="../../assets/imgs/weapons/terroristlogo.png" />
+        </ion-col>
+      </ion-row>
+
+
+    </ng-container>
+  </ion-navbar>
+
+
+  <ion-row>
+    <ng-container *ngIf="side == 'terrorist'">
+      <ion-col class="head">
+        <ng-container *ngIf="weaponCategory == 'pistol'">
+          Pistols
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'smg'">
+          Sub-Machine Guns
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'rifle'">
+          Rifles
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'heavy'">
+          Heavies
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'grenade'">
+          Grenades
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'accessory'">
+          Accessories
+        </ng-container>
+      </ion-col>
+    </ng-container>
+
+    <ng-container *ngIf="side == 'counter'">
+      <ion-col class="head2">
+        <ng-container *ngIf="weaponCategory == 'pistol'">
+          Pistols
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'smg'">
+          Sub-Machine Guns
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'rifle'">
+          Rifles
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'heavy'">
+          Heavies
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'grenade'">
+          Grenades
+        </ng-container>
+        <ng-container *ngIf="weaponCategory == 'accessory'">
+          Accessories
+        </ng-container>
+      </ion-col>
+    </ng-container>
+
+  </ion-row>
+
+</ion-header>
+
+
+<ion-content class="backcol">
+
+  <ng-container *ngFor="let weapon of listWeapons">
+    <ng-container *ngIf="side == weapon.side || 'both' == weapon.side">
+      <ng-container *ngIf="weaponCategory == weapon.category">
+        <ion-card class="backcard" (tap)="onClickWeapon(weapon)">
+          <ion-row>
+            <ion-col class="backimg" col-4>
+             <img class="img1" src="{{weapon.img}}" />
+            </ion-col>
+            <ion-col>
+              <ion-row class="weaponname">
+
+                <ion-col>
+                  {{weapon.name}}
+                </ion-col>
+                <ion-col col-4>
+
+                  <ng-container *ngIf="weapon.side == 'terrorist'">
+                      <ion-row class="right">
+                          <ion-col class="right parentlogo">
+                              <img class="sizeside logo2" src="../../assets/imgs/weapons/terroristlogo.png" />
+                          </ion-col>
+                        </ion-row>
+                  </ng-container>
+
+                  <ng-container *ngIf="weapon.side == 'counter'">
+                    <ion-row class="right">
+                 
+                      <ion-col class="right parentlogo">
+                          <img class="sizeside logo2" src="../../assets/imgs/weapons/counterlogo.png" />
+                      </ion-col>
+                    </ion-row>
+                        
+                  </ng-container>
+
+                  <ng-container *ngIf="weapon.side == 'both'">
+                    <ion-row>
+                        <ion-col class="right parentlogo">
+                            <img class="sizeside2 logo2" src="../../assets/imgs/weapons/terroristlogo.png" />
+                        </ion-col>
+                        <ion-col class="right parentlogo">
+                            <img class="sizeside2 logo2" src="../../assets/imgs/weapons/counterlogo.png" />
+                        </ion-col>  
+                    </ion-row>
+                                   
+                  </ng-container>
+
+                </ion-col>
+              </ion-row>
+
+              <ion-row class="weaponname1">
+                <ion-col>
+                  <ion-row>
+                    <ion-col>
+                      <div>Price :</div>
+                      <div>{{weapon.price}} $</div>
+                    </ion-col>
+                    <ion-col>
+                      <div>Ammo :</div>
+                      <div>{{weapon.magazine}}/{{weapon.capacity}}</div>
+                    </ion-col>
+
+                  </ion-row>
+                </ion-col>
+
+              </ion-row>
+            </ion-col>
+
+
+
+
+
+
+
+
+          </ion-row>
+        </ion-card>
+      </ng-container>
+    </ng-container>
+
+  </ng-container>
+
+
+
+</ion-content>
