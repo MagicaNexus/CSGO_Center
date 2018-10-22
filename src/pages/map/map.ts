@@ -25,17 +25,6 @@ export class MapPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MapPage');
-    let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
-      content: 'Loading...'
-    });
-
-    loading.present();
-
-    setTimeout(() => {
-      loading.dismiss();
-    }, 1000);
-  
   }
 
 }

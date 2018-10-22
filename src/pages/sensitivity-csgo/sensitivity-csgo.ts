@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, wtfStartTimeRange } from '@angular/core';
+import { IonicPage, NavController, NavParams, LoadingController, SelectPopover } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { AdMobFreeInterstitialConfig, AdMobFree } from '@ionic-native/admob-free';
 
 /**
  * Generated class for the SensitivityCsgoPage page.
@@ -19,7 +20,7 @@ export class SensitivityCsgoPage {
   public sensMousepad: number;
   public low: number; avg: number; high: number; stage: number; compteur: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public admob: AdMobFree, public loadingCtrl: LoadingController) {
     this.stage = 0;
     this.compteur = 1;
     this.low = 1;
@@ -37,15 +38,15 @@ export class SensitivityCsgoPage {
     this.compteur++;
     this.stage++;
     if (i == 1) {
-      this.high = (this.low*1 + this.high*1)/2;
+      this.high = (this.low * 1 + this.high * 1) / 2;
 
-      this.avg=this.high;
+      this.avg = this.high;
     }
 
     if (i == 2) {
-      this.low = (this.low*1 + this.high*1)/2;
- 
-      this.avg=this.low;
+      this.low = (this.low * 1 + this.high * 1) / 2;
+
+      this.avg = this.low;
     }
     this.arrondi();
 
@@ -61,25 +62,56 @@ export class SensitivityCsgoPage {
 
   }
 
-  onClickFind()
-  {
-    this.navCtrl.push("SensitivityMousePadPage",
-    {
-      theAverage: this.avg,
+  onClickFind() {
+    let interstitialConfig: AdMobFreeInterstitialConfig = {
+      isTesting: true, // Remove in production
+      autoShow: true
+      //id: Your Ad Unit ID goes here
+    };
+
+    this.admob.interstitial.config(interstitialConfig);
+
+    this.admob.interstitial.prepare().then(() => {
+      // success
+
     });
+
+
+
+    let loading = this.loadingCtrl.create({
+      spinner: 'bubbles',
+      content: 'Loading...'
+    });
+
+    loading.present();
+
+    setTimeout(() => {
+      loading.dismiss();
+
+    }, 2000);
+    setTimeout(() => {
+      this.onFind();
+    }, 1000);
+    
+
+  }
+
+  onFind() {
+    this.navCtrl.push("SensitivityMousePadPage",
+      {
+        theAverage: this.avg,
+      });
     console.log("Transmission result : " + this.avg);
   }
 
-  onClickRestart()
-  {
-    this.low=1;
+  onClickRestart() {
+    this.low = 1;
     this.high = 3;
-    this.compteur=1;
-    this.stage=0;
+    this.compteur = 1;
+    this.stage = 0;
   }
 
-  onClickHome()
-  {
+  onClickHome() {
     this.navCtrl.push(HomePage);
   }
 
