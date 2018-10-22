@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AdMobFree, AdMobFreeBannerConfig, AdMobFreeInterstitialConfig } from '@ionic-native/admob-free';
+import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
  
 @Component({
   selector: 'page-home',
@@ -21,11 +21,6 @@ export class HomePage {
         // success
     }).catch(e => console.log(e  + " admob"));
 
-    }
-    
-    showBanner()
-    {
-      
     }
  
    

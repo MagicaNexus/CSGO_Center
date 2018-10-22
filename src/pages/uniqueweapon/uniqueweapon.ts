@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController, AlertController } from 'ionic-angular';
 import { Weapons } from '../../providers/Weapons';
 import { HomePage } from '../home/home';
+import { AdMobFreeInterstitialConfig, AdMobFree } from '@ionic-native/admob-free';
 
 /**
  * Generated class for the UniqueweaponPage page.
@@ -17,9 +18,9 @@ import { HomePage } from '../home/home';
 })
 export class UniqueweaponPage {
 
-  weapon:Weapons;
+  weapon: Weapons;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, private alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController, private alertCtrl: AlertController, private admob: AdMobFree) {
     this.weapon = this.navParams.get("theWeapon");
     console.log(`Weapon : ${JSON.stringify(this.weapon)}`);
   }
@@ -36,10 +37,21 @@ export class UniqueweaponPage {
     setTimeout(() => {
       loading.dismiss();
     }, 500);
-  
+
   }
 
-  presentAlert(name : any, pattern: any) {
+  presentAlert(name: any, pattern: any) {
+    let interstitialConfig: AdMobFreeInterstitialConfig = {
+      isTesting: true, // Remove in production
+      autoShow: true
+      //id: Your Ad Unit ID goes here
+    };
+
+    this.admob.interstitial.config(interstitialConfig);
+
+    this.admob.interstitial.prepare().then(() => {
+      // success
+    });
     let alert = this.alertCtrl.create({
       title: "Pattern of the " + name,
       subTitle: pattern,
@@ -48,9 +60,13 @@ export class UniqueweaponPage {
     alert.present();
   }
 
-  onClickHome()
-  {
+  onClickHome() {
     this.navCtrl.push(HomePage);
   }
 
+  launchInterstitial() {
+
+    
+
+  }
 }
