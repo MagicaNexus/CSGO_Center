@@ -42,9 +42,8 @@ export class UniqueweaponPage {
 
   presentAlert(name: any, pattern: any) {
     let interstitialConfig: AdMobFreeInterstitialConfig = {
-      isTesting: true, // Remove in production
-      autoShow: true
-      //id: Your Ad Unit ID goes here
+      autoShow: true,
+      id: "ca-app-pub-2690755254544282/1855505057"
     };
 
     this.admob.interstitial.config(interstitialConfig);
