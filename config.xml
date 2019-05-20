@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.matthieurode.csgocenter" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>CSGO Center</name>
-    <description>A CSGO App.</description>
+<widget id="com.matthieurode.counterapp" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Counter Strike GO Center</name>
+    <description>An App.</description>
     <author email="matthieurode.web@gmail.com" href="https://www.linkedin.com/in/matthieurode/">Matthieu Rode</author>
     <content src="index.html" />
     <access origin="*" />
